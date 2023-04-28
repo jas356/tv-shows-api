@@ -27,3 +27,10 @@ export async function addShow(req, res) {
     await collection.add(newShow) //add the new show
     getShows(req, res) // this line returns the updated list
 }
+
+export async function deleteShow(req, res) {
+    const { showId } = req.params
+    await collection.doc(showId).delete()
+    getShows(req, res)
+    
+}
