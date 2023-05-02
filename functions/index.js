@@ -15,7 +15,7 @@ app.post("/login", login)   //login invokes function goes here
 //Show Routes
 app.get("/shows", getShows)
 app.post("/shows", addShow)
-app.delete("/shows/:showId", deleteShow)
+app.delete("/shows/:showId", deleteShow)  //WE WANT TO PROTECT
 //lets us run locally without emulators:
 app.listen(3001, () => console.log(`Listening on http://localhost:3000...`)) //This line lets us test it locally
 
