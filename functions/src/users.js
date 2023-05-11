@@ -34,7 +34,7 @@ export async function login(req, res) {
     .get()
     let user = users.docs.map(doc => ({...doc.data(), id: doc.id}))[0]//bracktet 0 is saying just give me the first one in the array
     if(!user) {
-        res.status(400).send({message: "Inavide email and/or password."})
+        res.status(400).send({message: "Invalid email and/or password."})
         return
     }
     delete user.password
